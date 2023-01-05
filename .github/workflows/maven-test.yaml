@@ -27,4 +27,5 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn compile
+      run: mvn pmd:check |
+           cat target/pmd.xml
